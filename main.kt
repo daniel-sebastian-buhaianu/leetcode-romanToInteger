@@ -33,25 +33,25 @@ fun isRomanNumeral(s: String): Boolean {
             if (s[i] == 'M') {
                 if (s[i+1] == 'M')
                 {
-                    println("p1")
+                    // println("p1")
                     return false
                 }
                 
                 if (s[i-1] == 'C' && romanLetters.indexOf(s[i+1]) > 3)
                 {
-                    println("p2")
+                    // println("p2")
                     return false
                 }
             }
 
             if (s[i] == 'D') {
                 if (s[i+1] == 'M' || s[i+1] == 'D') {
-                    println("p3")
+                    // println("p3")
                     return false
                 }
                 
                 if (s[i-1] == 'C' && romanLetters.indexOf(s[i+1]) > 3) {
-                    println("p4")
+                    // println("p4")
                     return false
                 }
             }
@@ -59,41 +59,41 @@ fun isRomanNumeral(s: String): Boolean {
             if (s[i] == 'C') {
                 if (s[i-1] == 'X' && romanLetters.indexOf(s[i+1]) > 1)
                 {
-                    println("p5")
+                    // println("p5")
                     return false
                 }
                 
-                if (s[i+1] == 'D' || s[i+1] == 'M' && s[i-1] == 'C') {
-                    println("p6")
+                if ((s[i+1] == 'D' || s[i+1] == 'M') && s[i-1] == 'C') {
+                    // println("p6")
                     return false
                 }
             }
 
             if (s[i] == 'L') {
                 if (romanLetters.indexOf(s[i+1]) > romanLetters.indexOf(s[i])) {
-                    println("p7")
+                    // println("p7")
                     return false
                 }
                 
                 if (s[i-1] == 'X' && romanLetters.indexOf(s[i+1]) > 1) {
-                    println("p8")
+                    // println("p8")
                     return false
                 }
             }
 
             if (s[i] == 'X') {
                 if (s[i+1] == 'D' || s[i+1] == 'M') {
-                    println("p9")
+                    // println("p9")
                     return false
                 }
                 
                 if (s[i-1] == 'I' && romanLetters.indexOf(s[i+1]) >= 0) {
-                    println("p10")
+                    // println("p10")
                     return false
                 }
 
-                if (s[i+1] == 'L' || s[i+1] == 'C' && s[i-1] == 'X') {
-                    println("p11")
+                if ((s[i+1] == 'L' || s[i+1] == 'C') && s[i-1] == 'X') {
+                    // println("p11")
                     return false
                 }
             }
@@ -101,24 +101,24 @@ fun isRomanNumeral(s: String): Boolean {
             if (s[i] == 'V')
             {
                 if (s[i+1] != 'I') {
-                    println("p12")
+                    // println("p12")
                     return false
                 }
                 
                 if (s[i-1] == 'I' && romanLetters.indexOf(s[i+1]) >= 0) {
-                    println("p13")
+                    // println("p13")
                     return false
                 }
             }
             
             if (s[i] == 'I') {
                 if (romanLetters.indexOf(s[i+1]) > 2) {
-                    println("p14")
+                    // println("p14")
                     return false
                 }
                 
-                if (s[i+1] == 'V' || s[i+1] == 'X' && s[i-1] == 'I') {
-                    println("p15")
+                if ((s[i+1] == 'V' || s[i+1] == 'X') && s[i-1] == 'I') {
+                    // println("p15")
                     return false
                 }
             }

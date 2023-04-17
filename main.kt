@@ -102,6 +102,7 @@ fun romanLetterToInt(romanLetter: String): Int? {
         "IV" to 4,
         "V" to 5,
         "IX" to 9,
+        "X" to 10,
         "XL" to 40,
         "L" to 50,
         "XC" to 90,

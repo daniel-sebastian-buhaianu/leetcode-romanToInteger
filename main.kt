@@ -32,62 +32,95 @@ fun isRomanNumeral(s: String): Boolean {
         } else if (i > 0) {
             if (s[i] == 'M') {
                 if (s[i+1] == 'M')
+                {
+                    println("p1")
                     return false
+                }
                 
                 if (s[i-1] == 'C' && romanLetters.indexOf(s[i+1]) > 3)
+                {
+                    println("p2")
                     return false
+                }
             }
 
             if (s[i] == 'D') {
-                if (s[i+1] == 'M' || s[i+1] == 'D')
+                if (s[i+1] == 'M' || s[i+1] == 'D') {
+                    println("p3")
                     return false
+                }
                 
-                if (s[i-1] == 'C' && romanLetters.indexOf(s[i+1]) > 3)
+                if (s[i-1] == 'C' && romanLetters.indexOf(s[i+1]) > 3) {
+                    println("p4")
                     return false
+                }
             }
 
             if (s[i] == 'C') {
                 if (s[i-1] == 'X' && romanLetters.indexOf(s[i+1]) > 1)
+                {
+                    println("p5")
                     return false
+                }
                 
-                if (s[i+1] == 'D' || s[i+1] == 'M' && s[i-1] == 'C')
+                if (s[i+1] == 'D' || s[i+1] == 'M' && s[i-1] == 'C') {
+                    println("p6")
                     return false
+                }
             }
 
             if (s[i] == 'L') {
-                if (romanLetters.indexOf(s[i+1]) > romanLetters.indexOf(s[i]))
+                if (romanLetters.indexOf(s[i+1]) > romanLetters.indexOf(s[i])) {
+                    println("p7")
                     return false
+                }
                 
-                if (s[i-1] == 'X' && romanLetters.indexOf(s[i+1]) > 1)
+                if (s[i-1] == 'X' && romanLetters.indexOf(s[i+1]) > 1) {
+                    println("p8")
                     return false
+                }
             }
 
             if (s[i] == 'X') {
-                if (s[i+1] == 'D' || s[i+1] == 'M')
+                if (s[i+1] == 'D' || s[i+1] == 'M') {
+                    println("p9")
                     return false
+                }
                 
-                if (s[i-1] == 'I' && romanLetters.indexOf(s[i+1]) >= 0)
+                if (s[i-1] == 'I' && romanLetters.indexOf(s[i+1]) >= 0) {
+                    println("p10")
                     return false
+                }
 
-                if (s[i+1] == 'L' || s[i+1] == 'C' && s[i-1] == 'X')
+                if (s[i+1] == 'L' || s[i+1] == 'C' && s[i-1] == 'X') {
+                    println("p11")
                     return false
+                }
             }
 
             if (s[i] == 'V')
             {
-                if (s[i+1] != 'I')
+                if (s[i+1] != 'I') {
+                    println("p12")
                     return false
+                }
                 
-                if (s[i-1] == 'I' && romanLetters.indexOf(s[i+1]) >= 0)
+                if (s[i-1] == 'I' && romanLetters.indexOf(s[i+1]) >= 0) {
+                    println("p13")
                     return false
+                }
             }
             
             if (s[i] == 'I') {
-                if (romanLetters.indexOf(s[i+1]) > 2)
+                if (romanLetters.indexOf(s[i+1]) > 2) {
+                    println("p14")
                     return false
+                }
                 
-                if (s[i+1] == 'V' || s[i+1] == 'X' && s[i-1] == 'I')
+                if (s[i+1] == 'V' || s[i+1] == 'X' && s[i-1] == 'I') {
+                    println("p15")
                     return false
+                }
             }
         }
     }
